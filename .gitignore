@@ -31,6 +31,10 @@ __dircheck.tmp
 **/.mypy_cache/
 **/.ruff_cache/
 **/*.pyc
+**/.selenium-cache/
+**/.benchmarks/
+**/chrome/
+**/chromedriver/
 
 # Java
 **/target/
