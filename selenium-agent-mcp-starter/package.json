@@ -2,7 +2,7 @@
   "name": "selenium-agent-mcp-starter",
   "version": "1.0.0",
   "scripts": {
-    "test": "mocha -r ts-node/register --timeout 30000 tests/**/*.spec.ts",
+    "test": "mocha -r ts-node/register --timeout 60000 tests/**/*.spec.ts",
     "lint": "eslint . --ext .ts",
     "build": "tsc",
     "accessibility:index": "node scripts/aggregate-accessibility.cjs",

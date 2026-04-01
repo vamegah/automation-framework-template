@@ -9,7 +9,7 @@ export function getBaseUrl(): string {
 }
 
 export function isHeadless(): boolean {
-  return getEnvVar('HEADLESS', 'false') === 'true';
+  return getEnvVar('HEADLESS', 'true') === 'true';
 }
 
 export function getSauceDemoUsername(): string {

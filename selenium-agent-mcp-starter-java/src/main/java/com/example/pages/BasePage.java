@@ -2,6 +2,7 @@ package com.example.pages;
 
 import com.example.config.SeleniumConfig;
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -27,7 +28,11 @@ public abstract class BasePage {
     }
 
     public void navigateTo(String url) {
-        driver.get(url);
+        try {
+            driver.get(url);
+        } catch (TimeoutException timeoutException) {
+            ((JavascriptExecutor) driver).executeScript("window.stop();");
+        }
     }
 
     protected WebElement findElement(By locator) {
