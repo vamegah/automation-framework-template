@@ -1,0 +1,45 @@
+.venv/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+__dircheck.tmp
+
+# Nested repo backup
+**/.git-backup/
+
+# Node / JS
+**/node_modules/
+**/.npm-cache/
+**/dist/
+**/coverage/
+**/playwright-report/
+**/blob-report/
+**/test-results/
+
+# Cypress / browser artifacts
+**/cypress/screenshots/
+**/cypress/videos/
+**/cypress/downloads/
+**/screenshots/
+**/.auth/
+
+# Python
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/*.pyc
+
+# Java
+**/target/
+**/*.iml
+
+# Local configuration / secrets
+**/.env
+**/.env.local
+**/.mcp.json
+
+# Generated outputs
+**/docs/enterprise-output/

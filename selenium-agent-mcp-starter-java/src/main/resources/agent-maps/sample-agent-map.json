@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "name": "Telerik Demos Landing Page",
+      "url": "https://www.telerik.com/support/demos",
+      "actions": [
+        { "type": "navigate", "url": "https://www.telerik.com/support/demos" },
+        { "type": "assertText", "value": "Demos" },
+        { "type": "screenshot", "path": "./screenshots/telerik-demos.png" }
+      ]
+    },
+    {
+      "name": "Kendo UI Demos Link Visible",
+      "url": "https://www.telerik.com/support/demos",
+      "actions": [
+        { "type": "navigate", "url": "https://www.telerik.com/support/demos" },
+        { "type": "assertText", "value": "Launch UI for jQuery demos" },
+        { "type": "screenshot", "path": "./screenshots/telerik-jquery-link.png" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "tasks": [
+    {
+      "url": "https://example.com/login",
+      "actions": [
+        { "type": "login", "username": "testuser", "password": "pass123" },
+        { "type": "screenshot", "path": "./screenshots/dashboard.png" }
+      ]
+    },
+    {
+      "url": "https://example.com/profile",
+      "actions": [
+        { "type": "click", "selector": "#edit-profile" },
+        { "type": "type", "selector": "#name", "value": "New Name" },
+        { "type": "screenshot", "path": "./screenshots/profile.png" }
+      ]
+    }
+  ]
+}

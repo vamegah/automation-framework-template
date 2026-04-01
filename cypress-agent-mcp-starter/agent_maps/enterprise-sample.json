@@ -1,0 +1,38 @@
+{
+  "requirements": [
+    {
+      "id": "JIRA-1234",
+      "title": "Customer can transfer funds",
+      "description": "As a customer, I can transfer funds between internal accounts.",
+      "acceptanceCriteria": [
+        "Transfer succeeds for valid accounts",
+        "Validation appears for insufficient funds"
+      ],
+      "linkedRequirements": ["REQ-88"],
+      "source": "jira",
+      "url": "https://jira.example.test/browse/JIRA-1234",
+      "labels": ["payments", "critical"],
+      "businessImpact": "critical"
+    }
+  ],
+  "codeSignalsByRequirement": {
+    "JIRA-1234": [
+      {
+        "filePath": "src/transfer.ts",
+        "cyclomaticComplexity": 18,
+        "churn": 6,
+        "touchedDomains": ["payments", "ledger", "notifications"]
+      }
+    ]
+  },
+  "reviewer": "qa-lead",
+  "scriptRequest": {
+    "framework": "typescript-cypress",
+    "testName": "Transfer Funds Enterprise Flow",
+    "pageObjectHint": "login",
+    "scenario": ["navigate to login page", "submit credentials through page object"],
+    "assertions": ["dashboard is visible after login"],
+    "secretKeys": ["API_KEY"],
+    "secretProvider": "vault"
+  }
+}

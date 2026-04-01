@@ -1,0 +1,19 @@
+{
+  "users": {
+    "valid": {
+      "usernameEnv": "ORANGEHRM_USERNAME",
+      "passwordEnv": "ORANGEHRM_PASSWORD"
+    },
+    "invalid": {
+      "username": "invalid.user@example.com",
+      "password": "bad-password"
+    }
+  },
+  "messages": {
+    "invalidLogin": "Invalid credentials"
+  },
+  "routes": {
+    "home": "/web/index.php/dashboard/index",
+    "login": "/web/index.php/auth/login"
+  }
+}

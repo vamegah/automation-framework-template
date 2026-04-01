@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+.npm-cache/
+
+# Test output
+test-results/
+playwright-report/
+blob-report/
+
+# Cached auth state (contains session cookies)
+.auth/
+
+# Playwright cache
+playwright/.cache/
+
+# Build output
+dist/
+
+# Environment variables (never commit secrets)
+.env
+.env.local
+
+# MCP configuration (may contain secrets)
+.mcp.json
+
+# Generated enterprise output
+docs/enterprise-output/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

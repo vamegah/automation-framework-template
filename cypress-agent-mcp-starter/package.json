@@ -1,0 +1,22 @@
+{
+  "name": "cypress-agent-mcp-starter",
+  "version": "1.0.0",
+  "scripts": {
+    "cy:open": "node scripts/run-cypress.cjs open",
+    "cy:run": "node scripts/run-cypress.cjs run",
+    "test": "node scripts/run-cypress.cjs run",
+    "accessibility:index": "node scripts/aggregate-accessibility.cjs",
+    "agent:run": "ts-node --project tsconfig.json scripts/run-agent.ts",
+    "enterprise:run": "npx ts-node --project tsconfig.json scripts/run-enterprise-agent.ts",
+    "test:enterprise": "npx ts-node --project tsconfig.json scripts/verify-enterprise.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "axe-core": "^4.11.2",
+    "cypress": "^13.6.0",
+    "cypress-axe": "^1.7.0",
+    "dotenv": "^16.3.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}

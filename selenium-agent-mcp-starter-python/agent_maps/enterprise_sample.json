@@ -1,0 +1,63 @@
+{
+  "webhook": {
+    "provider": "jira",
+    "issue": {
+      "key": "JIRA-1234",
+      "fields": {
+        "summary": "Customer can log into the commerce portal",
+        "acceptanceCriteria": [
+          "Valid users can sign in with centralized secrets",
+          "The login flow reuses existing page objects",
+          "Generated coverage remains linked to the source requirement"
+        ]
+      }
+    },
+    "linkedRequirements": [
+      "AUTH-44",
+      "SEC-9"
+    ],
+    "businessImpact": "critical",
+    "codeComplexity": 4,
+    "targetUrl": "https://www.saucedemo.com",
+    "notes": "Enterprise pilot for Selenium Python"
+  },
+  "review": {
+    "qaLead": "qa.lead@example.com",
+    "sampleScript": "import time\npassword = 'secret_sauce'\ntime.sleep(5)\ndriver.find_element('id', 'login-button')\n"
+  },
+  "failureAnalysis": {
+    "testName": "test_checkout_happy_path",
+    "testLogs": [
+      {
+        "level": "error",
+        "message": "UI assertion failed waiting for confirmation banner"
+      }
+    ],
+    "autLogs": [
+      {
+        "level": "error",
+        "source": "Datadog",
+        "message": "500 response from /api/checkout"
+      }
+    ],
+    "runHistory": [
+      {
+        "testName": "test_checkout_happy_path",
+        "result": "failed",
+        "passedOnRetry": true
+      },
+      {
+        "testName": "test_checkout_happy_path",
+        "result": "failed",
+        "passedOnRetry": true
+      },
+      {
+        "testName": "test_checkout_happy_path",
+        "result": "failed",
+        "passedOnRetry": true
+      }
+    ],
+    "videoPath": "artifacts/videos/test_checkout_happy_path.mp4",
+    "reproCurl": "curl -X POST https://demo.app/api/checkout -H \"Authorization: Bearer token\""
+  }
+}

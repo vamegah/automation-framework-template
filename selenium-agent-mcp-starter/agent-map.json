@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "name": "User Login",
+      "url": "https://www.saucedemo.com/",
+      "actions": [
+        { "type": "login", "username": "${SAUCEDEMO_USERNAME}", "password": "${SAUCEDEMO_PASSWORD}" },
+        { "type": "assertText", "value": "Products" },
+        { "type": "screenshot", "path": "./screenshots/saucedemo-products.png" }
+      ]
+    },
+    {
+      "name": "Inventory Smoke",
+      "url": "https://www.saucedemo.com/inventory.html",
+      "actions": [
+        { "type": "navigate", "url": "https://www.saucedemo.com/inventory.html" },
+        { "type": "assertText", "value": "Products" },
+        { "type": "screenshot", "path": "./screenshots/saucedemo-inventory.png" }
+      ]
+    }
+  ]
+}
